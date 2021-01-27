@@ -1,8 +1,7 @@
 package exercises;
 
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
+
 
 public class Alice {
     public static void main (String[] args) {
@@ -22,7 +21,7 @@ public class Alice {
         String [] quoteArray = quote.toLowerCase(Locale.ROOT).split(" ");
         int index = quote.indexOf(searchTerm);
         String [] extractWord = quote.toLowerCase(Locale.ROOT).split(String.valueOf(searchTerm));
-//        extractWord =
+//
         if (Arrays.asList(quoteArray).contains(searchTerm)) {
             System.out.println("The search term " + searchTerm + " was found");
             System.out.println("Index of search term: " + index);

@@ -1,4 +1,4 @@
-package org.launchcode.java.studio_Chap_3_Counting_Characters;
+package org.launchcode.java.studioChap3CountingCharacters;
 
 import java.util.*;
 

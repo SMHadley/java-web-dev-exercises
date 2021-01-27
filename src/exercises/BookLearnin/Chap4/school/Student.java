@@ -1,4 +1,4 @@
-package org.launchcode.java.demos.lsn3classes1;
+package exercises.BookLearnin.Chap4.school;
 
 // Start working here with your Student class.
 // To instantiate the Student class, add your code to the main in the file, SchoolPractice.
@@ -6,9 +6,10 @@ package org.launchcode.java.demos.lsn3classes1;
 public class Student {
 
     public static void main(String[] args) {
+
         Student me = new Student("Sandy", 001, 1, 4.0);
     }
-}
+
 
     private static int nextStudentId = 1;
     private String name;
@@ -35,23 +36,23 @@ public class Student {
     public String studentInfo() {
         return (this.name + " has a GPA of: " + this.gpa);
 
-}   /* Getters and Setters */
+    }   /* Getters and Setters */
 
-    public String getName() { return aName; }
+    public String getName() { return this.name; }
 
     public void setName(String aName) { name = aName; }
 
-    public int getStudentId() { return aStudentID; }
+    public int getStudentId() { return this.studentId; }
 
     private void setStudentId(int aStudentId) { studentId = aStudentId; }
 
-    public int numberOfCredits() { return aNumberOfCredits; }
+    public int numberOfCredits() { return this.numberOfCredits; }
 
     public void setNumberOfCredits(int aNumberOfCredits) { numberOfCredits = aNumberOfCredits; }
 
-    public double getGpa() { return aGetGpa; }
+    public double getGpa() { return this.gpa; }
 
     public void setGpa(double aGpa) { gpa = aGpa; }
 
-
+}
 

@@ -52,3 +52,48 @@ Most often, properties will be fields that have public setters, though they need
 Constructors allow us to initialize, or set the initial value of, some of our fields when creating a new object from a class.
 In Java, constructors have the same name as the class and are most often declared public (though they can have any other valid access modifier).
 They are declared without a return type. Any function that is named the same as the class and has no return type is a constructor.
+
+
+Chap 6 - UNIT TESTING
+
+TDD helps us create a checklist of what to do.
+
+Does the cat have a name = Does the class variable name get set properly?
+
+import static org.junit.Assert.assertEquals;
+
+
+public class CatTests {
+Cat myCat;
+Scanner scanner;
+
+@Before                             /* Initialization should occur within ONE Before tag */
+public void setUpCatTests() {
+this.myCat = new Cat("Bella", 7);
+this.scanner = new Scanner(System.in);
+}
+
+@Test                               /* Annotation */
+public void catsNameGetsSet() {
+Cat myCat = new Cat("Bella");
+String expected = "Bella";          /* expected values are hardcoded */
+String actual = myCat.getMyCatsName();
+assertEquals( expected , actual );
+}
+
+@Test
+public void catReturnsMeow() {
+    Cat myCat = new Cat("Bella", 7);
+    String expected = "Meow";
+    String actual = myCat.garfieldMeows();
+    assertEquals(expected, actual);
+}
+@After
+public void tearDownCatTests() {
+this.scanner.close();
+}
+}
+
+assertEqual
+assertTrue = boolean true
+assertFalse = boolean false
